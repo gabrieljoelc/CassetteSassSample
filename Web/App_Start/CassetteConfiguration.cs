@@ -1,3 +1,4 @@
+using System.IO;
 using Cassette;
 using Cassette.Scripts;
 using Cassette.Stylesheets;
@@ -11,7 +12,8 @@ namespace Web
     {
         public void Configure(BundleCollection bundles)
         {
-            bundles.AddPerIndividualFile<StylesheetBundle>("Content");
+            bundles.AddPerSubDirectory<StylesheetBundle>("Content/sass");
+            bundles.AddPerIndividualFile<StylesheetBundle>("Content", new FileSearch {SearchOption = SearchOption.TopDirectoryOnly});
             bundles.AddPerIndividualFile<ScriptBundle>("Scripts");
         }
     }
