@@ -86,7 +86,7 @@ $radius: 10px;
   -webkit-border-#{$vert}-#{$horz}-radius: $radius;
 }
 
-/*** Mixin ***/
+/*** Mixin & Interpolation ***/
 
 @mixin rounded-top-left {
   $vert: top;
