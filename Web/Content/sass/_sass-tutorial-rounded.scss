@@ -7,3 +7,8 @@
   -moz-border-radius-#{$vert}#{$horz}: $radius;
   -webkit-border-#{$vert}-#{$horz}-radius: $radius;
 }
+
+
+.importedRules {
+	border: 1px solid black;
+}
